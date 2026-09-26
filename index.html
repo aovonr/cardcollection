@@ -175,9 +175,16 @@
     margin-top:12px;
   }
   .split-item{flex:1; min-width:0;}
+  @media (max-width:360px){
+    .split-progress{gap:8px;}
+    .split-item:first-child{flex:1.1;} /* el primero tiene más cifras (x/493) */
+    .split-label{font-size:10px; gap:3px;}
+  }
   .split-label{
     display:flex;
     justify-content:space-between;
+    gap:4px;
+    white-space:nowrap;
     font-size:11px;
     color:rgba(245,241,230,0.65);
     margin-bottom:4px;
@@ -758,7 +765,7 @@
       <div class="bar-track"><div class="bar-fill" id="totalBar"></div></div>
       <div class="split-progress" id="splitProgress">
         <div class="split-item">
-          <div class="split-label"><span>Cromos normales</span><span id="normalCount">0/0</span></div>
+          <div class="split-label"><span>1ª edición</span><span id="normalCount">0/0</span></div>
           <div class="split-bar-track"><div class="split-bar-fill normal" id="normalBar"></div></div>
         </div>
         <div class="split-item">
